@@ -66,7 +66,7 @@ export default async function AdminTrailsPage() {
                   {trail.difficulty && (
                     <span className={cn(
                       'px-2 py-1 rounded text-xs font-medium',
-                      difficultyStyles[trail.difficulty]
+                      difficultyStyles[trail.difficulty as keyof typeof difficultyStyles]
                     )}>
                       {trail.difficulty}
                     </span>

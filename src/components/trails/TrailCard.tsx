@@ -91,7 +91,7 @@ export function TrailCard({ trail }: TrailCardProps) {
             <span
               className={cn(
                 'px-2 py-0.5 rounded border text-xs font-medium',
-                difficultyStyles[trail.difficulty]
+                difficultyStyles[trail.difficulty as keyof typeof difficultyStyles]
               )}
             >
               {trail.difficulty}

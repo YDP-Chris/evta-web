@@ -193,7 +193,7 @@ export default async function TrailPage({ params }: TrailPageProps) {
                 {trail.difficulty && (
                   <div>
                     <p className="text-sm text-gray-500 mb-1">Difficulty</p>
-                    <span className={cn('inline-block px-3 py-1 rounded-full text-sm font-semibold', difficultyStyles[trail.difficulty])}>
+                    <span className={cn('inline-block px-3 py-1 rounded-full text-sm font-semibold', difficultyStyles[trail.difficulty as keyof typeof difficultyStyles])}>
                       {trail.difficulty}
                     </span>
                   </div>

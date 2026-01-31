@@ -84,7 +84,7 @@ export function OverviewMap({ trails }: OverviewMapProps) {
               <div className="flex items-center gap-2 text-sm text-gray-600 mt-1">
                 {trail.distance_miles && <span>{trail.distance_miles} mi</span>}
                 {trail.difficulty && (
-                  <span className={`px-1.5 py-0.5 rounded text-xs font-medium ${difficultyStyles[trail.difficulty]}`}>
+                  <span className={`px-1.5 py-0.5 rounded text-xs font-medium ${difficultyStyles[trail.difficulty as keyof typeof difficultyStyles]}`}>
                     {trail.difficulty}
                   </span>
                 )}
