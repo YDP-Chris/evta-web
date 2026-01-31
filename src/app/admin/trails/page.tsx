@@ -63,12 +63,14 @@ export default async function AdminTrailsPage() {
                   </div>
                 </td>
                 <td className="px-6 py-4">
-                  <span className={cn(
-                    'px-2 py-1 rounded text-xs font-medium',
-                    difficultyStyles[trail.difficulty]
-                  )}>
-                    {trail.difficulty}
-                  </span>
+                  {trail.difficulty && (
+                    <span className={cn(
+                      'px-2 py-1 rounded text-xs font-medium',
+                      difficultyStyles[trail.difficulty]
+                    )}>
+                      {trail.difficulty}
+                    </span>
+                  )}
                 </td>
                 <td className="px-6 py-4">
                   <span
